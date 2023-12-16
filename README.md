@@ -1,6 +1,6 @@
 # basketball_counter_app
 
-A new Flutter project.
+My third Flutter project in my learning process.
 
 ## Getting Started
 
