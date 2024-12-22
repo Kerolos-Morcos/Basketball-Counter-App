@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
         },
         child: Icon(
           context.isDarkMode ? Icons.light_mode : Icons.dark_mode,
-          color: Colors.black,
+          color: context.iconMode,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,

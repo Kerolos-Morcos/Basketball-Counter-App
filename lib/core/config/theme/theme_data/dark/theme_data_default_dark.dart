@@ -1,18 +1,18 @@
 import 'package:basketball_counter_app/core/config/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
-ThemeData getDarkTheme() {
+ThemeData getDarkDefaultTheme() {
   return ThemeData(
     iconTheme: const IconThemeData(
       color: Colors.white,
     ),
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: Colors.orange,
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: Colors.orange.shade900,
       foregroundColor: AppColors.grey0,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(16)),
+        borderRadius: const BorderRadius.all(Radius.circular(16)),
         side: BorderSide(
-          color: Colors.orange,
+          color: Colors.orange.shade900,
           width: 2,
         ),
       ),
@@ -24,7 +24,7 @@ ThemeData getDarkTheme() {
     brightness: Brightness.dark,
     colorScheme: ColorScheme.fromSeed(
       // App Primary Colors in dark Mode
-      seedColor: Colors.orange,
+      seedColor: Colors.orange.shade900,
       brightness: Brightness.dark,
     ),
     textTheme: ThemeData.dark().textTheme.apply(
@@ -35,7 +35,7 @@ ThemeData getDarkTheme() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         // Buttons Primary Colors in Light Mode
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.orange.shade900,
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey800,
         disabledForegroundColor: AppColors.grey400,
@@ -44,8 +44,6 @@ ThemeData getDarkTheme() {
           borderRadius: BorderRadius.circular(12),
         ),
         minimumSize: const Size(110, 50),
-        // App TextStyle
-        // textStyle: ,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
@@ -63,8 +61,8 @@ ThemeData getDarkTheme() {
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(
-          color: AppColors.primary200,
+        borderSide: BorderSide(
+          color: Colors.orange.shade900,
         ),
       ),
       errorBorder: OutlineInputBorder(
@@ -78,7 +76,7 @@ ThemeData getDarkTheme() {
       fillColor: WidgetStateColor.resolveWith(
         (states) {
           if (states.contains(WidgetState.focused)) {
-            return Colors.orange;
+            return Colors.orange.shade100;
           } else {
             return AppColors.grey0;
           }

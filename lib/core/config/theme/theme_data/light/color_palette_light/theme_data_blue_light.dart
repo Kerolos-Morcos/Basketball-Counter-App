@@ -1,30 +1,30 @@
 import 'package:basketball_counter_app/core/config/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
-ThemeData getLightTheme() {
+ThemeData getLightBlueTheme() {
   return ThemeData(
     iconTheme: const IconThemeData(
-      color: Colors.orange,
+      color: AppColors.blueLightPrimary300,
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.blueLightScaffoldBackground,
       foregroundColor: AppColors.grey0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(16)),
         side: BorderSide(
-          color: Colors.orange,
+          color: AppColors.blueLightPrimary300,
           width: 2,
         ),
       ),
     ),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.orange,
+      backgroundColor: AppColors.blueLightPrimary300,
     ),
-    scaffoldBackgroundColor: AppColors.grey0,
+    scaffoldBackgroundColor: AppColors.blueLightScaffoldBackground,
     brightness: Brightness.light,
     colorScheme: ColorScheme.fromSeed(
       // App Primary Colors in Light Mode
-      seedColor: Colors.orange,
+      seedColor: AppColors.blueLightPrimary300,
       brightness: Brightness.light,
     ),
     textTheme: ThemeData.light().textTheme.apply(
@@ -35,8 +35,8 @@ ThemeData getLightTheme() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         // Buttons Primary Colors in Light Mode
-        backgroundColor: Colors.orange,
-        foregroundColor: AppColors.grey0,
+        backgroundColor: AppColors.blueLightPrimary300,
+        foregroundColor: Colors.black,
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
         // for borderRadius
@@ -64,7 +64,7 @@ ThemeData getLightTheme() {
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
         borderSide: const BorderSide(
-          color: AppColors.primary200,
+          color: AppColors.blueLightPrimary300,
         ),
       ),
       errorBorder: OutlineInputBorder(
@@ -78,7 +78,7 @@ ThemeData getLightTheme() {
       fillColor: WidgetStateColor.resolveWith(
         (states) {
           if (states.contains(WidgetState.focused)) {
-            return AppColors.primary0;
+            return AppColors.blueLightPrimary0;
           } else {
             return AppColors.grey0;
           }

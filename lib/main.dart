@@ -1,5 +1,11 @@
-import 'package:basketball_counter_app/core/config/theme/theme_data/theme_data_dark.dart';
-import 'package:basketball_counter_app/core/config/theme/theme_data/theme_data_light.dart';
+import 'package:basketball_counter_app/core/config/theme/theme_data/dark/color_palette_dark/theme_data_blue_dark.dart';
+import 'package:basketball_counter_app/core/config/theme/theme_data/dark/color_palette_dark/theme_data_green_dark.dart';
+import 'package:basketball_counter_app/core/config/theme/theme_data/dark/color_palette_dark/theme_data_red_dark.dart';
+import 'package:basketball_counter_app/core/config/theme/theme_data/dark/theme_data_default_dark.dart';
+import 'package:basketball_counter_app/core/config/theme/theme_data/light/color_palette_light/theme_data_blue_light.dart';
+import 'package:basketball_counter_app/core/config/theme/theme_data/light/color_palette_light/theme_data_green_light.dart';
+import 'package:basketball_counter_app/core/config/theme/theme_data/light/color_palette_light/theme_data_red_light.dart';
+import 'package:basketball_counter_app/core/config/theme/theme_data/light/theme_data_default_light.dart';
 import 'package:basketball_counter_app/cubits/theme_hydrated_cubit/theme_hydrated_cubit.dart';
 import 'package:basketball_counter_app/pages/home_page.dart';
 import 'package:flutter/foundation.dart';
@@ -8,10 +14,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   HydratedBloc.storage = await HydratedStorage.build(
-    storageDirectory: kIsWeb? HydratedStorage.webStorageDirectory : await getApplicationDocumentsDirectory(),
+    storageDirectory: kIsWeb
+        ? HydratedStorage.webStorageDirectory
+        : await getApplicationDocumentsDirectory(),
   );
   runApp(const BasketballCounterApp());
 }
@@ -32,8 +40,8 @@ class BasketballCounterApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             // start dark mode
-            theme: getLightTheme(),
-            darkTheme: getDarkTheme(),
+            theme: getLightDefaultTheme(),
+            darkTheme: getDarkDefaultTheme(),
             themeMode: mode,
             // end dark mode
             home: const HomePage(),

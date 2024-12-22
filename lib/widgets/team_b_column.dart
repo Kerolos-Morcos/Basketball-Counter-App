@@ -32,7 +32,6 @@ class TeamBColumn extends StatelessWidget {
                 'Add 1 Point',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.black,
                 ),
               ),
             ),
@@ -48,7 +47,6 @@ class TeamBColumn extends StatelessWidget {
                 'Add 2 Point',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.black,
                 ),
               ),
             ),
@@ -64,7 +62,6 @@ class TeamBColumn extends StatelessWidget {
                 'Add 3 Point',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.black,
                 ),
               ),
             ),
