@@ -28,10 +28,6 @@ class TeamAColumn extends StatelessWidget {
                 BlocProvider.of<BasketballCubit>(context)
                     .addPoint(team: 'A', points: 1);
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
-                minimumSize: const Size(110, 50),
-              ),
               child: const Text(
                 'Add 1 Point',
                 style: TextStyle(
@@ -48,10 +44,6 @@ class TeamAColumn extends StatelessWidget {
                 BlocProvider.of<BasketballCubit>(context)
                     .addPoint(team: 'A', points: 2);
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
-                minimumSize: const Size(110, 50),
-              ),
               child: const Text(
                 'Add 2 Point',
                 style: TextStyle(
@@ -68,10 +60,6 @@ class TeamAColumn extends StatelessWidget {
                 BlocProvider.of<BasketballCubit>(context)
                     .addPoint(team: 'A', points: 3);
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
-                minimumSize: const Size(110, 50),
-              ),
               child: const Text(
                 'Add 3 Point',
                 style: TextStyle(

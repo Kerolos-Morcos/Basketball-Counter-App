@@ -14,14 +14,13 @@ class ResetButton extends StatelessWidget {
       listener: (context, state) {},
       builder: (context, state) {
         return Container(
-          margin: const EdgeInsets.only(top: 70),
+          margin: const EdgeInsets.only(top: 40, bottom: 60),
           child: ElevatedButton(
             onPressed: () {
               BlocProvider.of<BasketballCubit>(context).resetPoints();
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.orange,
-              minimumSize: const Size(220, 40),
+              minimumSize: const Size(250, 50),
             ),
             child: const Text(
               'Reset',
