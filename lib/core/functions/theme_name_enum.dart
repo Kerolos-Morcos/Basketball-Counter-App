@@ -1,10 +1,6 @@
 enum ThemeNameEnum {
-  darkOrange,
-  darkGreen,
-  darkBlue,
-  darkRed,
-  lightOrange,
-  lightGreen,
-  lightBlue,
-  lightRed
-} 
+  orange,
+  green,
+  blue,
+  red,
+}

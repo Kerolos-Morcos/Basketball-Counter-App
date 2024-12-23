@@ -33,7 +33,7 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 //   }
 // }
 // ********************************************
-// Color Palette Cubit
+// Color Palette & Dark Mode Cubit
 class ThemeCubit extends HydratedCubit<ThemeHydratedCubitState> {
   ThemeCubit() : super(ThemeDefaultLightState());
   void updateTheme(ThemeHydratedCubitState mode) async {

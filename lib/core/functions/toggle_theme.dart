@@ -8,25 +8,21 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 void toggleTheme(BuildContext context, ThemeNameEnum themeName) {
   final isDark = context.isDarkMode;
   switch (themeName) {
-    case ThemeNameEnum.lightOrange:
-    case ThemeNameEnum.darkOrange:
+    case ThemeNameEnum.orange:
       context.read<ThemeCubit>().updateTheme(
           isDark ? ThemeDefaultDarkState() : ThemeDefaultLightState());
       break;
-    case ThemeNameEnum.lightGreen:
-    case ThemeNameEnum.darkGreen:
+    case ThemeNameEnum.green:
       context
           .read<ThemeCubit>()
           .updateTheme(isDark ? ThemeGreenDarkState() : ThemeGreenLightState());
       break;
-    case ThemeNameEnum.lightBlue:
-    case ThemeNameEnum.darkBlue:
+    case ThemeNameEnum.blue:
       context
           .read<ThemeCubit>()
           .updateTheme(isDark ? ThemeBlueDarkState() : ThemeBlueLightState());
       break;
-    case ThemeNameEnum.lightRed:
-    case ThemeNameEnum.darkRed:
+    case ThemeNameEnum.red:
       context
           .read<ThemeCubit>()
           .updateTheme(isDark ? ThemeRedDarkState() : ThemeRedLightState());

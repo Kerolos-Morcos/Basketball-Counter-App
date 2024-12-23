@@ -15,14 +15,14 @@ class HomeBodyCubitBuilder extends StatelessWidget {
     return BlocProvider(
       create: (context) => BasketballCubit(),
       child: const Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(height: 23),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TeamAColumn(),
               SizedBox(
-                height: 380,
+                height: 425,
                 child: VerticalDivider(
                   thickness: 2,
                 ),

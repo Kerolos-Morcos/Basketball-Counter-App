@@ -12,5 +12,10 @@ extension ThemeExtensions on BuildContext {
     return Theme.of(this).iconTheme.color ?? Theme.of(this).colorScheme.primary;
   }
 
+  Color get bottomSheetMode {
+    return Theme.of(this).bottomSheetTheme.backgroundColor ??
+        Theme.of(this).colorScheme.primary;
+  }
+
   ThemeHydratedCubitState get currentThemeState => read<ThemeCubit>().state;
 }

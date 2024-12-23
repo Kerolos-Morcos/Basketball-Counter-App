@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 ThemeData getDarkGreenTheme() {
   return ThemeData(
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: AppColors.greenDarkScaffoldBackground,
+    ),
     iconTheme: const IconThemeData(
       color: Colors.white,
     ),

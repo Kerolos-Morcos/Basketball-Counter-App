@@ -21,7 +21,7 @@ class TeamBColumn extends StatelessWidget {
             ),
             Text(
               '${BlocProvider.of<BasketballCubit>(context).teamBPoints}',
-              style: const TextStyle(fontSize: 150, height: 0),
+              style: const TextStyle(fontSize: 150),
             ),
             ElevatedButton(
               onPressed: () {
@@ -36,7 +36,7 @@ class TeamBColumn extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 18,
             ),
             ElevatedButton(
               onPressed: () {
@@ -51,7 +51,7 @@ class TeamBColumn extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 18,
             ),
             ElevatedButton(
               onPressed: () {

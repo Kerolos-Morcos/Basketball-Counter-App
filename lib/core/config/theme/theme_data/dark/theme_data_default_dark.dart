@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 
 ThemeData getDarkDefaultTheme() {
   return ThemeData(
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Colors.black,
+    ),
     iconTheme: const IconThemeData(
       color: Colors.white,
     ),
