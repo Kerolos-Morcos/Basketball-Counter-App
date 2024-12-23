@@ -14,7 +14,7 @@ class ResetButton extends StatelessWidget {
       listener: (context, state) {},
       builder: (context, state) {
         return Container(
-          margin: const EdgeInsets.only(top: 40, bottom: 60),
+          margin: const EdgeInsets.only(top: 28),
           child: ElevatedButton(
             onPressed: () {
               BlocProvider.of<BasketballCubit>(context).resetPoints();

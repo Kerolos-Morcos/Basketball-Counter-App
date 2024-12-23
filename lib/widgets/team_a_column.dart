@@ -17,11 +17,11 @@ class TeamAColumn extends StatelessWidget {
           children: [
             const Text(
               'Team A',
-              style: TextStyle(fontSize: 32),
+              style: TextStyle(fontSize: 32), 
             ),
             Text(
               '${BlocProvider.of<BasketballCubit>(context).teamAPoints}',
-              style: const TextStyle(fontSize: 150),
+              style: const TextStyle(fontSize: 150, height: 0),
             ),
             ElevatedButton(
               onPressed: () {

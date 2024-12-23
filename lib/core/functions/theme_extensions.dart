@@ -1,4 +1,7 @@
+import 'package:basketball_counter_app/cubits/theme_hydrated_cubit/theme_hydrated_cubit.dart';
+import 'package:basketball_counter_app/cubits/theme_hydrated_cubit/theme_hydrated_cubit_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 extension ThemeExtensions on BuildContext {
   bool get isDarkMode {
@@ -8,4 +11,6 @@ extension ThemeExtensions on BuildContext {
   Color get iconMode {
     return Theme.of(this).iconTheme.color ?? Theme.of(this).colorScheme.primary;
   }
+
+  ThemeHydratedCubitState get currentThemeState => read<ThemeCubit>().state;
 }

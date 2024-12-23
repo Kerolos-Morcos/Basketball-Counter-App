@@ -1,12 +1,5 @@
-import 'package:basketball_counter_app/core/config/theme/theme_data/dark/color_palette_dark/theme_data_blue_dark.dart';
-import 'package:basketball_counter_app/core/config/theme/theme_data/dark/color_palette_dark/theme_data_green_dark.dart';
-import 'package:basketball_counter_app/core/config/theme/theme_data/dark/color_palette_dark/theme_data_red_dark.dart';
-import 'package:basketball_counter_app/core/config/theme/theme_data/dark/theme_data_default_dark.dart';
-import 'package:basketball_counter_app/core/config/theme/theme_data/light/color_palette_light/theme_data_blue_light.dart';
-import 'package:basketball_counter_app/core/config/theme/theme_data/light/color_palette_light/theme_data_green_light.dart';
-import 'package:basketball_counter_app/core/config/theme/theme_data/light/color_palette_light/theme_data_red_light.dart';
-import 'package:basketball_counter_app/core/config/theme/theme_data/light/theme_data_default_light.dart';
 import 'package:basketball_counter_app/cubits/theme_hydrated_cubit/theme_hydrated_cubit.dart';
+import 'package:basketball_counter_app/cubits/theme_hydrated_cubit/theme_hydrated_cubit_state.dart';
 import 'package:basketball_counter_app/pages/home_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -35,15 +28,14 @@ class BasketballCounterApp extends StatelessWidget {
           create: (context) => ThemeCubit(),
         ),
       ],
-      child: BlocBuilder<ThemeCubit, ThemeMode>(
-        builder: (context, mode) {
+      child: BlocBuilder<ThemeCubit, ThemeHydratedCubitState>(
+        builder: (context, state) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            // start dark mode
-            theme: getLightDefaultTheme(),
-            darkTheme: getDarkDefaultTheme(),
-            themeMode: mode,
-            // end dark mode
+            theme: state.themeData,
+            // theme: getLightDefaultTheme(),
+            // darkTheme: getDarkDefaultTheme(),
+            // themeMode: mode,
             home: const HomePage(),
           );
         },
