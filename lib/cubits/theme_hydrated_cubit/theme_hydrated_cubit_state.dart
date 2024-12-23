@@ -18,6 +18,7 @@ final class ThemeDefaultLightState extends ThemeHydratedCubitState {
   @override
   ThemeData get themeData => getLightDefaultTheme();
 }
+
 final class ThemeDefaultDarkState extends ThemeHydratedCubitState {
   @override
   ThemeData get themeData => getDarkDefaultTheme();

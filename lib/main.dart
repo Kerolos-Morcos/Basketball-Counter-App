@@ -33,6 +33,7 @@ class BasketballCounterApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: state.themeData,
+// We Write This Code in Light & Dark Mode only
             // theme: getLightDefaultTheme(),
             // darkTheme: getDarkDefaultTheme(),
             // themeMode: mode,

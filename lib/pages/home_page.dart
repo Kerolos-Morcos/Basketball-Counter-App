@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
                   toggleTheme(context, ThemeNameEnum.lightOrange);
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange,
+                  backgroundColor: Colors.orange.shade800,
                   shape: const CircleBorder(),
                   minimumSize: const Size(60, 60),
                 ),
